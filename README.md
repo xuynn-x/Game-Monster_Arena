@@ -387,5 +387,5 @@ Các script hỗ trợ nằm trong [`Tools/`](Tools/): `audit_battle_models.py`,
 
 ---
 Phát triển bởi:
-Họ và tên: **Bế Thị Xuyến** 
+**Bế Thị Xuyến** 
 Email: [kim2k5x@gmail.com](mailto:kim2k5x@gmail.com)

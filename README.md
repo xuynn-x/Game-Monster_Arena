@@ -79,40 +79,7 @@ Thanh EP hiện có giá trị tối đa **60** và được đồng bộ, nhưn
 <a id="luong-su-dung"></a>
 ## 4. Luồng sử dụng và điều khiển
 
-```mermaid
-%%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "background": "#171717",
-    "primaryColor": "#0b2e5f",
-    "primaryTextColor": "#ffffff",
-    "primaryBorderColor": "#1489ff",
-    "lineColor": "#8a8a8a",
-    "secondaryColor": "#0b2e5f",
-    "tertiaryColor": "#171717",
-    "edgeLabelBackground": "#171717",
-    "fontFamily": "Arial, sans-serif"
-  }
-}}%%
-flowchart TD
-    Login[Đăng ký / Đăng nhập local] --> Menu[MainMenu]
-    Menu --> Team[Monsters / Team]
-    Team --> Menu
-    Menu --> Check{BATTLE: đội hợp lệ?}
-    Check -->|Chưa hợp lệ| Notice[Thông báo và chỉnh đội]
-    Notice --> Team
-    Check -->|Một Shadow Fox đang sở hữu| Search[Tìm đối thủ]
-    Search -->|Hủy / lỗi / quá thời gian| Menu
-    Search -->|Đủ hai người| Arena[Arena: chiến đấu Q/W/E]
-    Arena --> Result[Bảng kết quả trong Arena]
-    Result -->|Cả hai đồng ý tái đấu| Arena
-    Result -->|Rời phòng| Menu
-    Arena -->|Rời phòng| Menu
-    classDef screen fill:#0b2e5f,stroke:#1489ff,color:#ffffff
-    classDef decision fill:#06224a,stroke:#1489ff,color:#ffffff
-    class Login,Menu,Team,Notice,Search,Arena,Result screen
-    class Check decision
-```
+![Sơ đồ luồng sử dụng Monster Arena: đăng nhập, chuẩn bị đội, tìm trận, chiến đấu và tái đấu](Docs/Previews/Gameplay-Flow.png)
 
 **Cách bắt đầu:** đăng ký/đăng nhập, mở **MONSTERS** hoặc **TEAM** để bảo đảm đội có một Shadow Fox, sau đó bấm nút **BATTLE**. Artwork hiện tại của nút này hiển thị `Start / RANK`; chức năng thực tế là ghép trận 1v1 thông thường.
 

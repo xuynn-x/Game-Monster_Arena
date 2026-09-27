@@ -1,0 +1,39 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
+[Bb]uilds/
+[Uu]ser[Ss]ettings/
+[Mm]onster[Aa]rena[Vv]alidation/
+.monster_arena_unity_validation/
+.docx_review_20260915/
+UIElementsSchema/
+.vscode/
+**/bin/
+**/obj/
+*.csproj
+*.sln
+*.slnx
+
+# Local/editor artifacts
+MCP_TEST_preview.png
+*.user
+*.pidb
+*.booproj
+
+# Keep only the public README; all other Markdown stays local
+*.md
+*.md.meta
+!README.md
+
+# Documentation is local by default; keep only files referenced by README
+Docs/**
+!Docs/Previews/
+!Docs/Previews/Matchmaking-Current-2026-09-27.png
+!Docs/Validation/
+!Docs/Validation/Matchmaking/
+!Docs/Validation/Matchmaking/FinalA.png
+!Docs/Validation/Matchmaking/Build.txt
+!Docs/Audio/
+!Docs/Audio/ShadowFox-v1/
+!Docs/Audio/ShadowFox-v1/generate_samples.py

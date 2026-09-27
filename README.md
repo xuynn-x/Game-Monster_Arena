@@ -8,7 +8,7 @@ Phiên bản hiện tại tập trung vào **Shadow Fox**, với ba kỹ năng *
 
 > **Trạng thái: bản mẫu đang phát triển.** Đã có bản Windows và bằng chứng kiểm thử hai client. Tài khoản lưu local; trận đấu hiện hỗ trợ một Shadow Fox mỗi bên. Giao diện đội 5 ô, chữ RANK và các màn hình phụ không đồng nghĩa với đã có chiến đấu nhiều quái, xếp hạng hay nền kinh tế hoàn chỉnh.
 
-Thông tin trong README được đối chiếu với mã nguồn, cấu hình và tài liệu dự án ngày **27/09/2026**.
+Thông tin trong README được đối chiếu với mã nguồn, cấu hình và tài liệu dự án ngày **19/08/2026**.
 
 ## Mục lục
 

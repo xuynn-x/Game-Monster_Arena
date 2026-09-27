@@ -80,6 +80,20 @@ Thanh EP hiện có giá trị tối đa **60** và được đồng bộ, nhưn
 ## 4. Luồng sử dụng và điều khiển
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#171717",
+    "primaryColor": "#0b2e5f",
+    "primaryTextColor": "#ffffff",
+    "primaryBorderColor": "#1489ff",
+    "lineColor": "#8a8a8a",
+    "secondaryColor": "#0b2e5f",
+    "tertiaryColor": "#171717",
+    "edgeLabelBackground": "#171717",
+    "fontFamily": "Arial, sans-serif"
+  }
+}}%%
 flowchart TD
     Login[Đăng ký / Đăng nhập local] --> Menu[MainMenu]
     Menu --> Team[Monsters / Team]
@@ -94,6 +108,10 @@ flowchart TD
     Result -->|Cả hai đồng ý tái đấu| Arena
     Result -->|Rời phòng| Menu
     Arena -->|Rời phòng| Menu
+    classDef screen fill:#0b2e5f,stroke:#1489ff,color:#ffffff
+    classDef decision fill:#06224a,stroke:#1489ff,color:#ffffff
+    class Login,Menu,Team,Notice,Search,Arena,Result screen
+    class Check decision
 ```
 
 **Cách bắt đầu:** đăng ký/đăng nhập, mở **MONSTERS** hoặc **TEAM** để bảo đảm đội có một Shadow Fox, sau đó bấm nút **BATTLE**. Artwork hiện tại của nút này hiển thị `Start / RANK`; chức năng thực tế là ghép trận 1v1 thông thường.
@@ -136,6 +154,20 @@ Phiên bản Unity lấy từ [ProjectVersion.txt](ProjectSettings/ProjectVersio
 ## 6. Kiến trúc hệ thống
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#171717",
+    "primaryColor": "#0b2e5f",
+    "primaryTextColor": "#ffffff",
+    "primaryBorderColor": "#1489ff",
+    "lineColor": "#8a8a8a",
+    "secondaryColor": "#0b2e5f",
+    "tertiaryColor": "#171717",
+    "edgeLabelBackground": "#171717",
+    "fontFamily": "Arial, sans-serif"
+  }
+}}%%
 flowchart LR
     UI[Login / MainMenu / Monsters / Team] --> Account[LocalAccountService]
     Account --> Store[(PlayerPrefs + JSON)]
@@ -150,6 +182,10 @@ flowchart LR
     View --> Visual[Animator / Projectile / VFX]
     View --> HUD[ArenaBattleHud]
     View --> Audio[ArenaBattleAudio]
+    classDef block fill:#0b2e5f,stroke:#1489ff,color:#ffffff
+    classDef store fill:#06224a,stroke:#1489ff,color:#ffffff
+    class UI,Account,Rules,Match,Cloud,Runner,Spawn,State,View,Visual,HUD,Audio block
+    class Store store
 ```
 
 ### Các thành phần đầu mối

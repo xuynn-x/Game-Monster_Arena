@@ -52,8 +52,7 @@ Nền tảng đã có bản build được ghi nhận là **Windows 64-bit**. Ch
 
 ![Giao diện tìm đối thủ mới: thông báo hai dòng và nút hủy không có icon kiếm](Docs/Previews/Matchmaking-Current-2026-09-27.png)
 
-Ảnh render runtime 1280×720 chụp ngày **27/09/2026** từ development build theo source mới nhất: “Đang tìm đối thủ…” và số giây nằm trên hai dòng, cùng cỡ chữ; nút **HỦY TÌM TRẬN** đã bỏ icon kiếm và không còn dòng hướng dẫn hủy. Ảnh dùng tài khoản kiểm thử `Validation`, sau khi kết nối Photon và đang chờ đối thủ. Ảnh phản ánh UI trong source hiện tại; bản release EXE cũ chưa được build lại.
-
+Ảnh render runtime 1280×720 chụp ngày **27/09/2026** 
 <a id="tinh-nang"></a>
 ## 3. Tính năng chính
 
@@ -74,7 +73,7 @@ Nền tảng đã có bản build được ghi nhận là **Windows 64-bit**. Ch
 | Ranking | Thông tin người chơi, số trận/thắng và tỉ lệ thắng từ lịch sử local | Chưa có bảng xếp hạng server, điểm MMR hoặc mùa giải |
 | Rewards và tiền tệ | Có giao diện phần thưởng, Coin và Ruby | Chưa có cơ chế cấp thưởng hoặc nền kinh tế; số tiền hiển thị hiện là 0 |
 
-Thanh EP hiện có giá trị tối đa **60** và được đồng bộ, nhưng mã chiến đấu chưa trừ EP khi dùng kỹ năng. Không xem đây là cơ chế tiêu hao/hồi năng lượng đã hoàn thiện.
+Thanh EP hiện có giá trị tối đa **60** và được đồng bộ, nhưng mã chiến đấu chưa trừ EP khi dùng kỹ năng.
 
 <a id="luong-su-dung"></a>
 ## 4. Luồng sử dụng và điều khiển
@@ -157,7 +156,6 @@ Các tệp trong bảng nằm dưới [`Assets/MonsterArena/Scripts/`](Assets/Mo
 | `ArenaBattleAudio.cs` | Nạp WAV, phát theo sự kiện và dừng/reset nguồn âm |
 | `MatchmakingValidationClient.cs` | Harness kiểm tra bằng development player; loại khỏi release |
 
-`LocalBattleTest` là thành phần đang dùng để trình diễn Arena, dù tên tệp có chữ “Test”. Những script prototype khác vẫn được giữ trong dự án; bảng trên chỉ ra các đầu mối của luồng hiện hành.
 
 ### Dữ liệu và kết nối
 
